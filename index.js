@@ -8,7 +8,7 @@ const bodyParser=require('body-parser');
 
 require('./prod')(app);
 
-mongoose.connect('mongodb://localhost/Logging')
+mongoose.connect('mongodb+srv://nilay1998:1234@cluster0-iw2xu.mongodb.net/test')
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...'));
 
