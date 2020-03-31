@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/welcome"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:src="@drawable/welcome"/>
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:foregroundGravity="bottom"
+        android:indeterminate="true"
+        android:theme="@style/ProgressBarStyle" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="#012E57"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/imageview"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/login_image"/>
+
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/frutiger"
+            android:textColor="#fff"
+            android:text="Login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="124dp"/>
+
+        <EditText
+            android:inputType="number"
+            android:paddingLeft="16dp"
+            android:hint="Mobile no."
+            android:id="@+id/edittext"
+            android:fontFamily="@font/frutiger"
+            android:layout_marginTop="96dp"
+            android:layout_marginLeft="56dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/imageview"
+            android:layout_width="match_parent"
+            android:background="@drawable/frame"
+            android:layout_height="54dp"/>
+
+        <ImageView
+            android:id="@+id/send_login"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edittext"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="34dp"
+            android:background="@drawable/button_frame"
+            android:padding="8dp"
+            android:clickable="true"
+            android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+        <LinearLayout
+            android:layout_above="@id/tnc"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="48dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/frutiger"
+                android:textColor="#fff"
+                android:text="New User?"/>
+            <TextView
+                android:id="@+id/signup"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:clickable="true"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:fontFamily="@font/frutiger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Sign Up"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tnc"
+            android:fontFamily="@font/frutiger"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="56dp"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#012E57"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger"
+        android:textColor="#fff"
+        android:text="Sign Up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="212dp"/>
+
+    <EditText
+        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+        android:id="@+id/username"
+        android:paddingLeft="16dp"
+        android:hint="  User Name"
+        android:layout_marginRight="86dp"
+        android:fontFamily="@font/frutiger"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:background="@drawable/frame_signin"
+        android:layout_height="74dp"/>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/username"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="96dp"
+        android:background="@android:color/darker_gray" />
+    <EditText
+        android:id="@+id/phone"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:inputType="number"
+        android:layout_marginTop="1dp"
+        android:layout_below="@id/username"
+        android:paddingLeft="16dp"
+        android:hint="  Mobile no."
+        android:layout_marginRight="86dp"
+        android:fontFamily="@font/frutiger"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:background="@drawable/frame_signin"
+        android:layout_height="74dp"/>
+
+
+    <ImageView
+        android:id="@+id/temp"
+        android:visibility="invisible"
+        android:layout_alignRight="@id/username"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_frame"
+        android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70dp"
+        android:id="@+id/send_signup"
+        android:layout_below="@id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_frame"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+</RelativeLayout>

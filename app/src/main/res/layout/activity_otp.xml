@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#012E57"
+    android:layout_height="match_parent"
+    tools:context=".OtpActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger"
+        android:textColor="#fff"
+        android:text="Enter Code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/phoneText"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="112dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/frutiger"
+        android:textColor="#fff"
+        android:layout_above="@id/ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        tools:text="We have sent an SMS on 9044712480 with a 6 digit verification code"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:background="@drawable/frame"
+        android:layout_width="match_parent"
+        android:layout_marginRight="64dp"
+        android:layout_height="164dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <EditText
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:id="@+id/editText1"
+                android:layout_margin="8dp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:id="@+id/editText2"
+                android:layout_margin="8dp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:id="@+id/editText3"
+                android:layout_margin="8dp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:id="@+id/editText4"
+                android:layout_margin="8dp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:id="@+id/editText5"
+                android:layout_margin="8dp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:id="@+id/editText6"
+                android:layout_margin="8dp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/otpbutton"
+            android:fontFamily="@font/frutiger"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="#fff"
+            android:background="@drawable/bframe"/>
+    </LinearLayout>
+
+</RelativeLayout>
