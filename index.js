@@ -5,10 +5,17 @@ const _ = require('lodash');
 const mongoose = require('mongoose');
 const {User, validate} = require('./models/user');
 const bodyParser=require('body-parser');
+const config=require('config');
+
+if(!config.get('db'))
+{
+  console.error('FATAL ERROR: Database is not defined.');
+  process.exit(1);
+}
 
 require('./prod')(app);
 
-mongoose.connect('mongodb+srv://nilay:1234@cluster0-rwbce.mongodb.net/test')
+mongoose.connect(config.get('db'))
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...'));
 
